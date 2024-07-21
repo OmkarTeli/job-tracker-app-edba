@@ -12,7 +12,7 @@ const router = express.Router();
 
 router.post("/create-application", requireSignIn, createApplicationController);
 router.get("/get-application/:id", getApplicationController);
-router.get("/get-application", getAllApplicationsController);
+router.get("/get-application", requireSignIn, getAllApplicationsController);
 router.patch("/update-application/:id", updateApplicationController);
 router.delete("/delete-applicaion/:id", deleteApplicationController);
 module.exports = router;
