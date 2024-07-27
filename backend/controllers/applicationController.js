@@ -1,4 +1,3 @@
-const { application } = require("express");
 const applicationModel = require("../model/applicationModel");
 
 const createApplicationController = async (req, res) => {
